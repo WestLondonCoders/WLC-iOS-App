@@ -10,7 +10,9 @@ import UIKit
 
 class LanguagesViewController: UITableViewController {
     var languages = ["JavaScript","HTML/CSS","Python","Ruby","Java","Rails","Git","React","PHP","C","Scala","Swift","Pascal","Middleman","Go","C#","Vue"]
-    
+
+    var colours: [UIColor] = [.wlcYellow, .wlcTrueBlue, .wlcGreen, .wlcRed, .wlcBrown, .wlcRed, .wlcPurple, .wlcSkyBlue, .wlcNavy, .wlcDarkBlue, .wlcDarkPurple, .wlcRed, .wlcLimeGreen, .wlcYellow, .wlcTaroPurple, .wlcDarkPurple, .black]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class LanguagesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         cell.textLabel?.text = languages[indexPath.row]
+        cell.backgroundColor = colours[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
         
         return cell
     }
@@ -84,4 +88,54 @@ class LanguagesViewController: UITableViewController {
     }
     */
 
+}
+
+extension UIColor {
+    static var wlcGreen: UIColor {
+        return UIColor(red: 0/255, green: 225/255, blue: 159/255, alpha: 1)
+    }
+
+    static var wlcPurple: UIColor {
+        return UIColor(red: 58/255, green: 2/255, blue: 162/255, alpha: 1)
+    }
+
+    static var wlcSkyBlue: UIColor {
+        return UIColor(red: 1/255, green: 219/255, blue: 255/255, alpha: 1)
+    }
+
+    static var wlcNavy: UIColor {
+        return UIColor(red: 95/255, green: 124/255, blue: 224/255, alpha: 1)
+    }
+
+    static var wlcTrueBlue: UIColor {
+        return UIColor(red: 63/255, green: 141/255, blue: 203/255, alpha: 1)
+    }
+
+    static var wlcTaroPurple: UIColor {
+        return UIColor(red: 136/255, green: 142/255, blue: 192/255, alpha: 1)
+    }
+
+    static var wlcDarkPurple: UIColor {
+        return UIColor(red: 42/255, green: 1/255, blue: 133/255, alpha: 1)
+    }
+
+    static var wlcRed: UIColor {
+        return UIColor(red: 255/255, green: 51/255, blue: 40/255, alpha: 1)
+    }
+
+    static var wlcLimeGreen: UIColor {
+        return UIColor(red: 113/255, green: 247/255, blue: 90/255, alpha: 1)
+    }
+
+    static var wlcYellow: UIColor {
+        return UIColor(red: 253/255, green: 19/255, blue: 47/255, alpha: 1)
+    }
+
+    static var wlcDarkBlue: UIColor {
+        return UIColor(red: 0/255, green: 66/255, blue: 92/255, alpha: 1)
+    }
+
+    static var wlcBrown: UIColor {
+        return UIColor(red: 87/255, green: 16/255, blue: 10/255, alpha: 1)
+    }
 }
