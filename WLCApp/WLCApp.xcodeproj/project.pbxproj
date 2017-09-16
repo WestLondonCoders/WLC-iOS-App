@@ -13,6 +13,8 @@
 		3395F34E1F361C1700913E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3395F34C1F361C1700913E1B /* Main.storyboard */; };
 		3395F3501F361C1700913E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3395F34F1F361C1700913E1B /* Assets.xcassets */; };
 		3395F3531F361C1700913E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3395F3511F361C1700913E1B /* LaunchScreen.storyboard */; };
+		CAA9439C1F6D61D200060648 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9439A1F6D61D200060648 /* LanguageTableViewCell.swift */; };
+		CAA9439D1F6D61D200060648 /* LanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA9439B1F6D61D200060648 /* LanguageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3395F34F1F361C1700913E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3395F3521F361C1700913E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3395F3541F361C1700913E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAA9439A1F6D61D200060648 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		CAA9439B1F6D61D200060648 /* LanguageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				3395F3481F361C1700913E1B /* AppDelegate.swift */,
 				3395F34A1F361C1700913E1B /* ViewController.swift */,
 				3395F34C1F361C1700913E1B /* Main.storyboard */,
+				CAA9439A1F6D61D200060648 /* LanguageTableViewCell.swift */,
+				CAA9439B1F6D61D200060648 /* LanguageTableViewCell.xib */,
 				3395F34F1F361C1700913E1B /* Assets.xcassets */,
 				3395F3511F361C1700913E1B /* LaunchScreen.storyboard */,
 				3395F3541F361C1700913E1B /* Info.plist */,
@@ -128,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3395F3531F361C1700913E1B /* LaunchScreen.storyboard in Resources */,
+				CAA9439D1F6D61D200060648 /* LanguageTableViewCell.xib in Resources */,
 				3395F3501F361C1700913E1B /* Assets.xcassets in Resources */,
 				3395F34E1F361C1700913E1B /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3395F34B1F361C1700913E1B /* ViewController.swift in Sources */,
+				CAA9439C1F6D61D200060648 /* LanguageTableViewCell.swift in Sources */,
 				3395F3491F361C1700913E1B /* AppDelegate.swift in Sources */,
 				080A9EE71F64458B00336C97 /* LanguagesViewController.swift in Sources */,
 			);
@@ -267,10 +275,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UJV83DBSU9;
 				INFOPLIST_FILE = WLCApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.westlondoncoders.WLCApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -280,10 +290,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UJV83DBSU9;
 				INFOPLIST_FILE = WLCApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.westlondoncoders.WLCApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
