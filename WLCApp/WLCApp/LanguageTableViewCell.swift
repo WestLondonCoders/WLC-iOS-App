@@ -13,6 +13,7 @@ class LanguageTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet weak var backgroundColour: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

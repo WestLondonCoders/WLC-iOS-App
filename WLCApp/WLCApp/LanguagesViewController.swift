@@ -8,12 +8,32 @@
 
 import UIKit
 
+struct language {
+    let name:String
+    let icon:UIImage?
+    let colour:UIColor
+    let description:String
+}
+
 class LanguagesViewController: UITableViewController {
-    var languages = ["JavaScript","HTML/CSS","Python","Ruby","Java","Rails","Git","React","PHP","C","Scala","Swift","Haskell","Middleman","Go","C#","Vue"]
     
-    let languageIcons = [UIImage(named:"js"), UIImage(named:"html"), UIImage(named:"python"), UIImage(named:"ruby"), UIImage(named: "java"), UIImage(named: "rails"), UIImage(named: "git"), UIImage(named: "react"), UIImage(named: "php"), UIImage(named: "c"), UIImage(named: "scala"), UIImage(named: "swift"), UIImage(named: "haskell"), UIImage(named:"middleman"), UIImage(named: "go"), UIImage(named: "csharp"), UIImage(named: "vue")]
-    
-    
+    let languagesArray = [language.init(name: "JavaScript", icon: UIImage(named:"js"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "HTML/CSS", icon: UIImage(named:"html"), colour: UIColor.red, description: "Backbone of the web"),
+    language.init(name: "Python", icon: UIImage(named:"python"), colour: UIColor.blue, description: "Popular machine learning"),
+    language.init(name: "Ruby", icon: UIImage(named:"ruby"), colour: UIColor.blue, description: "Ruby is a wonderful language to write in. It's readable, not too fiddly and Rails is magical to build apps with."),
+    language.init(name: "Java", icon: UIImage(named:"java"), colour: UIColor.blue, description: ""),
+    language.init(name: "Rails", icon: UIImage(named:"rails"), colour: UIColor.blue, description: ""),
+    language.init(name: "Git", icon: UIImage(named:"git"), colour: UIColor.blue, description: "Source control"),
+    language.init(name: "React", icon: UIImage(named:"react"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "PHP", icon: UIImage(named:"php"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "C", icon: UIImage(named:"c"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Scala", icon: UIImage(named:"scala"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Swift", icon: UIImage(named:"swift"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Haskell", icon: UIImage(named:"haskell"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Middleman", icon: UIImage(named:"middleman"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Go", icon: UIImage(named:"go"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "C#", icon: UIImage(named:"csharp"), colour: UIColor.blue, description: "Language for the web"),
+    language.init(name: "Vue", icon: UIImage(named:"vue"), colour: UIColor.blue, description: "Language for the web")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +57,25 @@ class LanguagesViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let language = languagesArray[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "LanguageCell", for: indexPath) as? LanguageTableViewCell else {
             assertionFailure("🔥 LanguagesViewController: Failed to create languageTableViewCell")
             return UITableViewCell()
         }
         
-        cell.titleLabel?.text = languages[indexPath.row]
-        cell.iconImageView.image = languageIcons[indexPath.row]
+        cell.titleLabel?.text = language.name //languages[indexPath.row]
+        cell.iconImageView.image = language.icon
+        cell.backgroundColour.backgroundColor = language.colour
+        cell.descriptionLabel.text = language.description
+        //To make the imageView circular.
+        cell.iconImageView.layer.cornerRadius =             cell.iconImageView.frame.size.width / 2
+        cell.iconImageView.clipsToBounds = true
+        
+        //To make the border a little circular
+        cell.iconImageView.layer.borderWidth = 3.0
+        cell.iconImageView.layer.borderColor = language.colour.cgColor
+        //Change the background colour for the view
+
         
         return cell
     }
