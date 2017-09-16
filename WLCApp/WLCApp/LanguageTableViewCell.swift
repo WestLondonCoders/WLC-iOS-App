@@ -10,6 +10,10 @@ import UIKit
 
 class LanguageTableViewCell: UITableViewCell {
 
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var iconImageView: UIImageView!
+    @IBOutlet var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

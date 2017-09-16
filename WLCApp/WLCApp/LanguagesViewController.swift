@@ -9,11 +9,17 @@
 import UIKit
 
 class LanguagesViewController: UITableViewController {
-    var languages = ["JavaScript","HTML/CSS","Python","Ruby","Java","Rails","Git","React","PHP","C","Scala","Swift","Pascal","Middleman","Go","C#","Vue"]
+    var languages = ["JavaScript","HTML/CSS","Python","Ruby","Java","Rails","Git","React","PHP","C","Scala","Swift","Haskell","Middleman","Go","C#","Vue"]
+    
+    let languageIcons = [UIImage(named:"js"), UIImage(named:"html"), UIImage(named:"python"), UIImage(named:"ruby"), UIImage(named: "java"), UIImage(named: "rails"), UIImage(named: "git"), UIImage(named: "react"), UIImage(named: "php"), UIImage(named: "c"), UIImage(named: "scala"), UIImage(named: "swift"), UIImage(named: "haskell"), UIImage(named:"middleman"), UIImage(named: "go"), UIImage(named: "csharp"), UIImage(named: "vue")]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(UINib(nibName: "LanguageTableViewCell", bundle: nil), forCellReuseIdentifier: "LanguageCell")
+        
     }
 
 
@@ -31,11 +37,20 @@ class LanguagesViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = languages[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LanguageCell", for: indexPath) as? LanguageTableViewCell else {
+            assertionFailure("🔥 LanguagesViewController: Failed to create languageTableViewCell")
+            return UITableViewCell()
+        }
+        
+        cell.titleLabel?.text = languages[indexPath.row]
+        cell.iconImageView.image = languageIcons[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
     }
  
 
