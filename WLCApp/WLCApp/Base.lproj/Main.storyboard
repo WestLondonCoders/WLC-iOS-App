@@ -103,9 +103,9 @@
         <!--Languages-->
         <scene sceneID="qmq-2L-sIl">
             <objects>
-                <tableViewController id="6ar-1c-G7X" customClass="LanguagesViewController" customModule="WLCApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="6ar-1c-G7X" customClass="LanguagesViewController" customModule="WLCApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vGf-Ot-6yj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -123,6 +123,7 @@
                             <outlet property="delegate" destination="6ar-1c-G7X" id="que-14-gxO"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Languages" id="Fcm-XF-MHh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ro-u6-UZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
