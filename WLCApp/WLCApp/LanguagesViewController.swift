@@ -21,23 +21,23 @@ class LanguagesViewController: UITableViewController {
     var colours: [UIColor] = [.wlcYellow, .wlcTrueBlue, .wlcGreen, .wlcRed, .wlcBrown, .wlcRed, .wlcPurple, .wlcSkyBlue, .wlcNavy, .wlcDarkBlue, .wlcDarkPurple, .wlcRed, .wlcLimeGreen, .wlcYellow, .wlcTaroPurple, .wlcDarkPurple, .black]
 
 
-    let languagesArray = [language.init(name: "JavaScript", icon: UIImage(named:"js"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "HTML/CSS", icon: UIImage(named:"html"), colour: UIColor.red, description: "Backbone of the web"),
-    language.init(name: "Python", icon: UIImage(named:"python"), colour: UIColor.blue, description: "Popular machine learning"),
-    language.init(name: "Ruby", icon: UIImage(named:"ruby"), colour: UIColor.blue, description: "Ruby is a wonderful language to write in. It's readable, not too fiddly and Rails is magical to build apps with."),
-    language.init(name: "Java", icon: UIImage(named:"java"), colour: UIColor.blue, description: ""),
-    language.init(name: "Rails", icon: UIImage(named:"rails"), colour: UIColor.blue, description: ""),
-    language.init(name: "Git", icon: UIImage(named:"git"), colour: UIColor.blue, description: "Source control"),
-    language.init(name: "React", icon: UIImage(named:"react"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "PHP", icon: UIImage(named:"php"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "C", icon: UIImage(named:"c"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Scala", icon: UIImage(named:"scala"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Swift", icon: UIImage(named:"swift"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Haskell", icon: UIImage(named:"haskell"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Middleman", icon: UIImage(named:"middleman"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Go", icon: UIImage(named:"go"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "C#", icon: UIImage(named:"csharp"), colour: UIColor.blue, description: "Language for the web"),
-    language.init(name: "Vue", icon: UIImage(named:"vue"), colour: UIColor.blue, description: "Language for the web")]
+    let languagesArray = [language.init(name: "JavaScript", icon: UIImage(named:"js"), colour: UIColor.wlcYellow, description: "Language for the web"),
+    language.init(name: "HTML/CSS", icon: UIImage(named:"html"), colour: UIColor.wlcTrueBlue, description: "Backbone of the web"),
+    language.init(name: "Python", icon: UIImage(named:"python"), colour: UIColor.wlcGreen, description: "Popular machine learning"),
+    language.init(name: "Ruby", icon: UIImage(named:"ruby"), colour: UIColor.wlcRed, description: "Ruby is a wonderful language to write in. It's readable, not too fiddly and Rails is magical to build apps with."),
+    language.init(name: "Java", icon: UIImage(named:"java"), colour: UIColor.wlcBrown, description: ""),
+    language.init(name: "Rails", icon: UIImage(named:"rails"), colour: UIColor.wlcRed, description: ""),
+    language.init(name: "Git", icon: UIImage(named:"git"), colour: UIColor.wlcPurple, description: "Source control"),
+    language.init(name: "React", icon: UIImage(named:"react"), colour: UIColor.wlcSkyBlue, description: "Language for the web"),
+    language.init(name: "PHP", icon: UIImage(named:"php"), colour: UIColor.wlcNavy, description: "Language for the web"),
+    language.init(name: "C", icon: UIImage(named:"c"), colour: UIColor.wlcDarkBlue, description: "Language for the web"),
+    language.init(name: "Scala", icon: UIImage(named:"scala"), colour: UIColor.wlcDarkPurple, description: "Language for the web"),
+    language.init(name: "Swift", icon: UIImage(named:"swift"), colour: UIColor.wlcRed, description: "Language for the web"),
+    language.init(name: "Haskell", icon: UIImage(named:"haskell"), colour: UIColor.wlcLimeGreen, description: "Language for the web"),
+    language.init(name: "Middleman", icon: UIImage(named:"middleman"), colour: UIColor.wlcYellow, description: "Language for the web"),
+    language.init(name: "Go", icon: UIImage(named:"go"), colour: UIColor.wlcTaroPurple, description: "Language for the web"),
+    language.init(name: "C#", icon: UIImage(named:"csharp"), colour: UIColor.wlcDarkPurple, description: "Language for the web"),
+    language.init(name: "Vue", icon: UIImage(named:"vue"), colour: UIColor.black, description: "Language for the web")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +65,13 @@ class LanguagesViewController: UITableViewController {
             assertionFailure("🔥 LanguagesViewController: Failed to create languageTableViewCell")
             return UITableViewCell()
         }
+        
+        
+//        if a == b else {
+//            //do this
+//        }
 
-        cell.titleLabel?.text = language.name //languages[indexPath.row]
+        cell.titleLabel.text = language.name //languages[indexPath.row]
         cell.iconImageView.image = language.icon
         cell.backgroundColour.backgroundColor = language.colour
         cell.descriptionLabel.text = language.description
@@ -75,7 +80,7 @@ class LanguagesViewController: UITableViewController {
         cell.iconImageView.clipsToBounds = true
         
         //To make the border a little circular
-        cell.iconImageView.layer.borderWidth = 3.0
+        cell.iconImageView.layer.borderWidth = 2.0
         cell.iconImageView.layer.borderColor = language.colour.cgColor
         //Change the background colour for the view
 
@@ -175,7 +180,7 @@ extension UIColor {
     }
 
     static var wlcYellow: UIColor {
-        return UIColor(red: 253/255, green: 19/255, blue: 47/255, alpha: 1)
+        return UIColor(red: 242/255, green: 213/255, blue: 10/255, alpha: 1)
     }
 
     static var wlcDarkBlue: UIColor {
