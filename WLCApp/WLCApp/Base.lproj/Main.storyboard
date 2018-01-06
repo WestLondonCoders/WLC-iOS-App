@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9WI-gL-q5K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9WI-gL-q5K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,7 +34,7 @@
                             <constraint firstItem="kA9-1P-thT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="umM-JN-sRO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Uso-D2-skR"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="Uso-D2-skR"/>
                     <connections>
                         <outlet property="webView" destination="kA9-1P-thT" id="igF-kE-8gY"/>
                     </connections>
@@ -42,25 +42,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137"/>
-        </scene>
-        <!--Members-->
-        <scene sceneID="aBN-7q-hKa">
-            <objects>
-                <viewController id="GLP-BP-wkF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IzC-Va-c4E"/>
-                        <viewControllerLayoutGuide type="bottom" id="v8e-Ag-bEL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8ES-a5-ZMr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.55422634548611116" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Members" id="6Q5-rA-uwL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x2w-J4-LKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137" y="1084"/>
         </scene>
         <!--Hackrooms-->
         <scene sceneID="PFB-mO-yTE">
@@ -75,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.46686208680052965" blue="0.46488041628228916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hackrooms" id="EeX-iN-9P3"/>
+                    <tabBarItem key="tabBarItem" title="Hackrooms" image="hackroomIcon" id="EeX-iN-9P3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIP-J6-hZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.41889601573819801" green="1" blue="0.35172622837806466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meetups" id="rAA-YD-bQD"/>
+                    <tabBarItem key="tabBarItem" title="Meetups" image="meetup-logo" id="rAA-YD-bQD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7V-nW-xJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hRm-im-bdu" id="heM-Ah-fsU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -124,7 +105,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Languages" id="Fcm-XF-MHh"/>
+                    <tabBarItem key="tabBarItem" title="Languages" image="languages" id="Fcm-XF-MHh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ro-u6-UZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,16 +122,52 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="GoG-65-9rU"/>
-                        <segue destination="GLP-BP-wkF" kind="relationship" relationship="viewControllers" id="Sqa-Wx-4J8"/>
                         <segue destination="Ijp-lx-HVP" kind="relationship" relationship="viewControllers" id="kI1-eD-Zlc"/>
                         <segue destination="ph5-L8-y3H" kind="relationship" relationship="viewControllers" id="tj0-8f-gJS"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="GoG-65-9rU"/>
                         <segue destination="6ar-1c-G7X" kind="relationship" relationship="viewControllers" id="7kk-gk-Xbl"/>
+                        <segue destination="nNR-Ve-oUW" kind="relationship" relationship="viewControllers" id="9b7-VV-ZkM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7W-0g-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--Members-->
+        <scene sceneID="zNt-vv-Qzn">
+            <objects>
+                <tableViewController id="nNR-Ve-oUW" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0sS-rp-k61">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dhR-UU-ix7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhR-UU-ix7" id="q9t-Mv-wBv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nNR-Ve-oUW" id="Ux4-R8-erG"/>
+                            <outlet property="delegate" destination="nNR-Ve-oUW" id="Ccg-o2-n6W"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Members" image="members" id="yKg-iu-DVL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwD-cq-0nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="913"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Home" width="29" height="29"/>
+        <image name="hackroomIcon" width="30" height="30"/>
+        <image name="languages" width="30" height="30"/>
+        <image name="meetup-logo" width="32" height="32"/>
+        <image name="members" width="30" height="30"/>
+    </resources>
 </document>

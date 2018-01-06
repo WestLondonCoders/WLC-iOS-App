@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		080A9EE71F64458B00336C97 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A9EE61F64458B00336C97 /* LanguagesViewController.swift */; };
+		084B504D20012C39003E5AAC /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084B504C20012C39003E5AAC /* MembersTableViewController.swift */; };
 		3395F3491F361C1700913E1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395F3481F361C1700913E1B /* AppDelegate.swift */; };
 		3395F34B1F361C1700913E1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395F34A1F361C1700913E1B /* ViewController.swift */; };
 		3395F34E1F361C1700913E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3395F34C1F361C1700913E1B /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		080A9EE61F64458B00336C97 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		084B504C20012C39003E5AAC /* MembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
 		3395F3451F361C1700913E1B /* WLCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3395F3481F361C1700913E1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3395F34A1F361C1700913E1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3395F3511F361C1700913E1B /* LaunchScreen.storyboard */,
 				3395F3541F361C1700913E1B /* Info.plist */,
 				080A9EE61F64458B00336C97 /* LanguagesViewController.swift */,
+				084B504C20012C39003E5AAC /* MembersTableViewController.swift */,
 			);
 			path = WLCApp;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				CAA9439C1F6D61D200060648 /* LanguageTableViewCell.swift in Sources */,
 				3395F3491F361C1700913E1B /* AppDelegate.swift in Sources */,
 				080A9EE71F64458B00336C97 /* LanguagesViewController.swift in Sources */,
+				084B504D20012C39003E5AAC /* MembersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
