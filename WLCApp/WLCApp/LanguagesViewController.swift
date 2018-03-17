@@ -65,11 +65,6 @@ class LanguagesViewController: UITableViewController {
             assertionFailure("🔥 LanguagesViewController: Failed to create languageTableViewCell")
             return UITableViewCell()
         }
-        
-        
-//        if a == b else {
-//            //do this
-//        }
 
         cell.titleLabel.text = language.name //languages[indexPath.row]
         cell.iconImageView.image = language.icon
